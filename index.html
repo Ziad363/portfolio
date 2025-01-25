@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziad Ahmed - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #1b1b1b, #ff4500);
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: #1b1b1b;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #ff4500;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.7);
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .profile img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.9);
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .social a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.8rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social a:hover {
+            color: #ff4500;
+            transform: scale(1.2);
+        }
+
+        .contact {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        .contact img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+
+        footer {
+            text-align: center;
+            background: #1b1b1b;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #868e96;
+        }
+
+        .animated-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: #262626;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        /* Animation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+
+        .fade-in:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .fade-in:nth-child(3) {
+            animation-delay: 1.5s;
+        }
+
+        .fade-in:nth-child(4) {
+            animation-delay: 2s;
+        }
+
+        /* Background Animation */
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .background-animation span {
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 69, 0, 0.8);
+            animation: animate 25s linear infinite;
+            border-radius: 50%;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100vw);
+                opacity: 0;
+            }
+        }
+
+        .background-animation span:nth-child(odd) {
+            background: rgba(255, 69, 0, 0.5);
+            animation-duration: 18s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background-animation">
+        <span style="top: 90%; left: 10%; width: 40px; height: 40px;"></span>
+        <span style="top: 80%; left: 50%;"></span>
+        <span style="top: 70%; left: 80%;"></span>
+        <span style="top: 60%; left: 30%;"></span>
+        <span style="top: 50%; left: 60%;"></span>
+        <span style="top: 40%; left: 20%; width: 50px; height: 50px;"></span>
+    </div>
+
+    <header>
+        <h1>Ziad Ahmed Mohamed</h1>
+        <p>Cyber Security Student | Tech Enthusiast</p>
+    </header>
+
+    <div class="container">
+        <div class="profile fade-in">
+            <img src="cc343b5a-9aae-46ba-a121-73135606e401.jpg" alt="Ziad Ahmed">
+        </div>
+
+        <div class="social fade-in">
+            <a href="https://www.facebook.com/share/1BJ1vXAQ2b/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/ziadahmad556?igsh=MWIzaDE5cWpkNWxhOQ==" target="_blank">Instagram</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+
+        <div class="contact fade-in">
+            <h2>Contact Me</h2>
+            <p>Phone: 01103435553 <img src="egyptian-flag-large.jpg" alt="Egypt Flag"></p>
+            <p>Email: ziad@example.com</p>
+        </div>
+
+        <div class="animated-section fade-in">
+            <div class="card">
+                <h3>Skills</h3>
+                <p>Cyber Security, Python, Networking, Linux</p>
+            </div>
+            <div class="card">
+                <h3>Projects</h3>
+                <p>Website Security Audits, Network Penetration Testing</p>
+            </div>
+            <div class="card">
+                <h3>Education</h3>
+                <p>Bachelor in Cyber Security</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ziad Ahmed Mohamed. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
